@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Models
 {
-    [Table("Actor")]
     public class Ator
     {
-        [Column("actor_id")]
         public int Id { get; set; }
         [Column("first_name", TypeName = "varchar(45)")]
         [Required]
