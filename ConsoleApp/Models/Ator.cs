@@ -10,14 +10,8 @@ namespace ConsoleApp.Models
 {
     public class Ator
     {
-        public int Id { get; set; }
-        [Column("first_name", TypeName = "varchar(45)")]
-        [Required]
+        public int? Id { get; set; }
         public string PrimeiroNome { get; set; }
-        [Column("last_name", TypeName = "varchar(45)")]
-        [Required]
         public string SegundoNome { get; set; }
-        [Column("last_update", TypeName = "datetime")]
-        public DateTime UltimaAtualizacao { get; set; }
     }
 }

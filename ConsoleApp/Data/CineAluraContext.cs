@@ -31,7 +31,7 @@ namespace ConsoleApp.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            //Mapeando tabela de atores...
+            #region TABELA ACTOR
             modelBuilder.Entity<Ator>()
                 .ToTable("actor", "dbo");
             modelBuilder.Entity<Ator>()
@@ -40,15 +40,18 @@ namespace ConsoleApp.Data
             modelBuilder.Entity<Ator>()
                 .Property(a => a.PrimeiroNome)
                 .HasColumnName("first_name")
-                .HasColumnType("varchar(45)");
+                .HasColumnType("varchar(45)")
+                .IsRequired();
             modelBuilder.Entity<Ator>()
                 .Property(a => a.SegundoNome)
                 .HasColumnName("last_name")
-                .HasColumnType("varchar(45)");
+                .HasColumnType("varchar(45)")
+                .IsRequired();
             modelBuilder.Entity<Ator>()
-                .Property(a => a.UltimaAtualizacao)
-                .HasColumnName("last_update")
-                .HasColumnType("datetime");
+                .Property<DateTime>("last_update")
+                .HasColumnType("datetime")
+                .IsRequired();
+            #endregion
         }
     }
 }
