@@ -162,7 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\CineAluraContext.cs" />
+    <Compile Include="Data\EntitiesConfiguration\AtorConfiguration.cs" />
+    <Compile Include="Data\EntitiesConfiguration\FilmeConfiguration.cs" />
     <Compile Include="Models\Ator.cs" />
+    <Compile Include="Models\Filme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

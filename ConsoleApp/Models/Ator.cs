@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace ConsoleApp.Models
 {
     public class Ator
@@ -13,5 +6,10 @@ namespace ConsoleApp.Models
         public int? Id { get; set; }
         public string PrimeiroNome { get; set; }
         public string SegundoNome { get; set; }
+
+        public override string ToString()
+        {
+            return $"Ator: {PrimeiroNome} {SegundoNome}\n";
+        }
     }
 }

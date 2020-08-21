@@ -1,4 +1,5 @@
-﻿using ConsoleApp.Models;
+﻿using ConsoleApp.Data.EntitiesConfiguration;
+using ConsoleApp.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace ConsoleApp.Data
     public class CineAluraContext : DbContext
     {
         public DbSet<Ator> Atores { get; set; }
+        public DbSet<Filme> Filmes { get; set; }
 
         public CineAluraContext()
         {
@@ -29,29 +31,8 @@ namespace ConsoleApp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            #region TABELA ACTOR
-            modelBuilder.Entity<Ator>()
-                .ToTable("actor", "dbo");
-            modelBuilder.Entity<Ator>()
-                .Property(a => a.Id)
-                .HasColumnName("actor_id");
-            modelBuilder.Entity<Ator>()
-                .Property(a => a.PrimeiroNome)
-                .HasColumnName("first_name")
-                .HasColumnType("varchar(45)")
-                .IsRequired();
-            modelBuilder.Entity<Ator>()
-                .Property(a => a.SegundoNome)
-                .HasColumnName("last_name")
-                .HasColumnType("varchar(45)")
-                .IsRequired();
-            modelBuilder.Entity<Ator>()
-                .Property<DateTime>("last_update")
-                .HasColumnType("datetime")
-                .IsRequired();
-            #endregion
+            modelBuilder.ApplyConfiguration(new AtorConfiguration());
+            modelBuilder.ApplyConfiguration(new FilmeConfiguration());
         }
     }
 }

@@ -15,8 +15,17 @@ namespace ConsoleApp
         {
             using (var context = new CineAluraContext())
             {
+                var queryFilmes = context.Filmes;
 
+                foreach (var filme in queryFilmes)
+                {
+                    Console.WriteLine(filme);
+                }
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Tecle 'enter' para finalizar a execução...");
+            Console.ReadKey();
         }
     }
 }
