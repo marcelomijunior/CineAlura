@@ -167,11 +167,13 @@
     <Compile Include="Data\EntitiesConfiguration\FilmeAtorConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeCategoriaConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeConfiguration.cs" />
+    <Compile Include="Data\EntitiesConfiguration\IdiomaConfiguration.cs" />
     <Compile Include="Models\Ator.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Filme.cs" />
     <Compile Include="Models\FilmeAtor.cs" />
     <Compile Include="Models\FilmeCategoria.cs" />
+    <Compile Include="Models\Idioma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

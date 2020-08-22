@@ -16,16 +16,31 @@ namespace ConsoleApp
         {
             using (var context = new CineAluraContext())
             {
-                var query = context.Categorias
+                //var idiomas = context.Idiomas
+                //    .Include(i => i.FilmesFalados);
+
+                //foreach (var idioma in idiomas)
+                //{
+                //    Console.WriteLine(idioma);
+                //    foreach (var filme in idioma.FilmesFalados)
+                //    {
+                //        Console.WriteLine(filme);
+                //    }
+                //    Console.WriteLine();
+                //}
+
+                var categorias = context.Categorias
                     .Include(c => c.Filmes)
                     .ThenInclude(f => f.Categoria)
-                    .First();
+                    .ToList();
 
-                Console.WriteLine("Categoria {0}", query);
-                Console.WriteLine("filmes:");
-                foreach (var q in query.Filmes)
+                foreach (var categoria in categorias)
                 {
-                    Console.WriteLine("\t-{0}", q.Filme);
+                    Console.WriteLine("Categoria {0}", categoria);
+                    foreach (var cf in categoria.Filmes)
+                    {
+                        Console.WriteLine(cf.Filme);
+                    }
                 }
             }
 

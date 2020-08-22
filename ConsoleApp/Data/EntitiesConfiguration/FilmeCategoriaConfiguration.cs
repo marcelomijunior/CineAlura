@@ -13,7 +13,7 @@ namespace ConsoleApp.Data.EntitiesConfiguration
             builder.Property<int>("film_id");
             builder.Property<byte>("category_id");
             builder.HasKey("film_id", "category_id");
-            builder.Property<DateTime>("last_update").HasColumnType("datime").HasDefaultValueSql("getdate()");
+            builder.Property<DateTime>("last_update").HasColumnType("datetime").HasDefaultValueSql("getdate()");
             builder.HasOne(fc => fc.Filme).WithMany(f => f.Categorias).HasForeignKey("film_id");
             builder.HasOne(fc => fc.Categoria).WithMany(c => c.Filmes).HasForeignKey("category_id");
         }

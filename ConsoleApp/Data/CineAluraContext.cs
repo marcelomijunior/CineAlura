@@ -11,6 +11,7 @@ namespace ConsoleApp.Data
         public DbSet<FilmeAtor> Elenco { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<FilmeCategoria> FilmeCategorias { get; set; }
+        public DbSet<Idioma> Idiomas { get; set; }
 
         public CineAluraContext()
         {
@@ -34,6 +35,7 @@ namespace ConsoleApp.Data
             modelBuilder.ApplyConfiguration(new FilmeAtorConfiguration());
             modelBuilder.ApplyConfiguration(new CategoriaConfiguration());
             modelBuilder.ApplyConfiguration(new FilmeCategoriaConfiguration());
+            modelBuilder.ApplyConfiguration(new IdiomaConfiguration());
         }
     }
 }

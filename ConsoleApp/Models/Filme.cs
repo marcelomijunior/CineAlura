@@ -17,6 +17,8 @@ namespace ConsoleApp.Models
         public short Duracao { get; set; }
         public IList<FilmeAtor> Elenco { get; set; }
         public IList<FilmeCategoria> Categorias { get; set; }
+        public Idioma IdiomaFalado { get; set; }
+        public Idioma IdiomaOriginal { get; set; }
 
         public override string ToString()
         {
