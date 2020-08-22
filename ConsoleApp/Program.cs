@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,16 @@ namespace ConsoleApp
         {
             using (var context = new CineAluraContext())
             {
-                var queryFilmes = context.Filmes;
+                var query = context.Filmes
+                    .Include(f => f.Elenco)
+                    .ThenInclude(fa => fa.Ator)
+                    .First();
 
-                foreach (var filme in queryFilmes)
+                Console.WriteLine(query);
+                Console.WriteLine("Elenco:");
+                foreach (var q in query.Elenco)
                 {
-                    Console.WriteLine(filme);
+                    Console.WriteLine(q.Ator);
                 }
             }
 

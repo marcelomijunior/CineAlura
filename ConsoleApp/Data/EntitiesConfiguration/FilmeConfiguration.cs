@@ -10,7 +10,7 @@ namespace ConsoleApp.Data.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Filme> builder)
         {
-            #region TABELA FILM
+            #region mapping table
             builder.ToTable("film", "dbo");
             builder.Property(f => f.Id).HasColumnName("film_id");
             builder.Property(f => f.Titulo).HasColumnName("title").HasColumnType("varchar(255)").IsRequired();
