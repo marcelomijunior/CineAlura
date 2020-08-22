@@ -168,6 +168,19 @@
     <Compile Include="Data\EntitiesConfiguration\FilmeCategoriaConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\IdiomaConfiguration.cs" />
+    <Compile Include="Migrations\20200822183516_Initial.cs" />
+    <Compile Include="Migrations\20200822183516_Initial.designer.cs">
+      <DependentUpon>20200822183516_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200822184028_indiceAtorSegundoNome.cs" />
+    <Compile Include="Migrations\20200822184028_indiceAtorSegundoNome.designer.cs">
+      <DependentUpon>20200822184028_indiceAtorSegundoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200822184708_UniqueAtorPrimeiroSegundoNome.cs" />
+    <Compile Include="Migrations\20200822184708_UniqueAtorPrimeiroSegundoNome.designer.cs">
+      <DependentUpon>20200822184708_UniqueAtorPrimeiroSegundoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\CineAluraContextModelSnapshot.cs" />
     <Compile Include="Models\Ator.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Filme.cs" />
@@ -181,9 +194,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Scripts\carga_inicial.sql" />
     <Content Include="Scripts\estrutura.sql" />

@@ -16,19 +16,6 @@ namespace ConsoleApp
         {
             using (var context = new CineAluraContext())
             {
-                //var idiomas = context.Idiomas
-                //    .Include(i => i.FilmesFalados);
-
-                //foreach (var idioma in idiomas)
-                //{
-                //    Console.WriteLine(idioma);
-                //    foreach (var filme in idioma.FilmesFalados)
-                //    {
-                //        Console.WriteLine(filme);
-                //    }
-                //    Console.WriteLine();
-                //}
-
                 var categorias = context.Categorias
                     .Include(c => c.Filmes)
                     .ThenInclude(f => f.Categoria)
