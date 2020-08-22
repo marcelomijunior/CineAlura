@@ -7,6 +7,7 @@ namespace ConsoleApp.Models
         public Filme()
         {
             Elenco = new List<FilmeAtor>();
+            Categorias = new List<FilmeCategoria>();
         }
 
         public int Id { get; set; }
@@ -15,6 +16,7 @@ namespace ConsoleApp.Models
         public string AnoLancamento { get; set; }
         public short Duracao { get; set; }
         public IList<FilmeAtor> Elenco { get; set; }
+        public IList<FilmeCategoria> Categorias { get; set; }
 
         public override string ToString()
         {

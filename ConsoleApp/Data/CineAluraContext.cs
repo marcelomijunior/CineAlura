@@ -1,11 +1,6 @@
 ﻿using ConsoleApp.Data.EntitiesConfiguration;
 using ConsoleApp.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp.Data
 {
@@ -14,6 +9,8 @@ namespace ConsoleApp.Data
         public DbSet<Ator> Atores { get; set; }
         public DbSet<Filme> Filmes { get; set; }
         public DbSet<FilmeAtor> Elenco { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<FilmeCategoria> FilmeCategorias { get; set; }
 
         public CineAluraContext()
         {
@@ -35,6 +32,8 @@ namespace ConsoleApp.Data
             modelBuilder.ApplyConfiguration(new AtorConfiguration());
             modelBuilder.ApplyConfiguration(new FilmeConfiguration());
             modelBuilder.ApplyConfiguration(new FilmeAtorConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoriaConfiguration());
+            modelBuilder.ApplyConfiguration(new FilmeCategoriaConfiguration());
         }
     }
 }
