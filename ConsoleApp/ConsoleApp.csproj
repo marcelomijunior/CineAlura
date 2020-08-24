@@ -180,9 +180,18 @@
     <Compile Include="Migrations\20200822184708_UniqueAtorPrimeiroSegundoNome.designer.cs">
       <DependentUpon>20200822184708_UniqueAtorPrimeiroSegundoNome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200823173936_classificacaoFilme.cs" />
+    <Compile Include="Migrations\20200823173936_classificacaoFilme.designer.cs">
+      <DependentUpon>20200823173936_classificacaoFilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200824142537_FilmeCheckConstraint.cs" />
+    <Compile Include="Migrations\20200824142537_FilmeCheckConstraint.designer.cs">
+      <DependentUpon>20200824142537_FilmeCheckConstraint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\CineAluraContextModelSnapshot.cs" />
     <Compile Include="Models\Ator.cs" />
     <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\ClassificacaoIndicativaEnum.cs" />
     <Compile Include="Models\Filme.cs" />
     <Compile Include="Models\FilmeAtor.cs" />
     <Compile Include="Models\FilmeCategoria.cs" />

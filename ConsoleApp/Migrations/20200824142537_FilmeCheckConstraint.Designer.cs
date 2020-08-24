@@ -4,14 +4,16 @@ using ConsoleApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ConsoleApp.Migrations
 {
     [DbContext(typeof(CineAluraContext))]
-    partial class CineAluraContextModelSnapshot : ModelSnapshot
+    [Migration("20200824142537_FilmeCheckConstraint")]
+    partial class FilmeCheckConstraint
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
