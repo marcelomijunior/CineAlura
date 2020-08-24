@@ -1,4 +1,5 @@
 ﻿using ConsoleApp.Data;
+using ConsoleApp.Models;
 using System;
 
 namespace ConsoleApp
@@ -10,6 +11,7 @@ namespace ConsoleApp
             using (var context = new CineAluraContext())
             {
             }
+
 
             Console.WriteLine();
             Console.WriteLine("Tecle 'enter' para finalizar a execução...");

@@ -168,6 +168,7 @@
     <Compile Include="Data\EntitiesConfiguration\FilmeCategoriaConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\IdiomaConfiguration.cs" />
+    <Compile Include="Extensions\ClassificacaoIndicativaExtensions.cs" />
     <Compile Include="Migrations\20200822183516_Initial.cs" />
     <Compile Include="Migrations\20200822183516_Initial.designer.cs">
       <DependentUpon>20200822183516_Initial.cs</DependentUpon>
@@ -187,6 +188,10 @@
     <Compile Include="Migrations\20200824142537_FilmeCheckConstraint.cs" />
     <Compile Include="Migrations\20200824142537_FilmeCheckConstraint.designer.cs">
       <DependentUpon>20200824142537_FilmeCheckConstraint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200824160727_EnumeradoClassificacaoIndicativa.cs" />
+    <Compile Include="Migrations\20200824160727_EnumeradoClassificacaoIndicativa.designer.cs">
+      <DependentUpon>20200824160727_EnumeradoClassificacaoIndicativa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CineAluraContextModelSnapshot.cs" />
     <Compile Include="Models\Ator.cs" />
