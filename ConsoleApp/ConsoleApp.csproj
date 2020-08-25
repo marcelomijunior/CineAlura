@@ -164,10 +164,13 @@
     <Compile Include="Data\CineAluraContext.cs" />
     <Compile Include="Data\EntitiesConfiguration\AtorConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\CategoriaConfiguration.cs" />
+    <Compile Include="Data\EntitiesConfiguration\ClienteConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeAtorConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeCategoriaConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\FilmeConfiguration.cs" />
+    <Compile Include="Data\EntitiesConfiguration\FuncionarioConfiguration.cs" />
     <Compile Include="Data\EntitiesConfiguration\IdiomaConfiguration.cs" />
+    <Compile Include="Data\EntitiesConfiguration\PessoaConfiguration.cs" />
     <Compile Include="Extensions\ClassificacaoIndicativaExtensions.cs" />
     <Compile Include="Migrations\20200822183516_Initial.cs" />
     <Compile Include="Migrations\20200822183516_Initial.designer.cs">
@@ -197,10 +200,13 @@
     <Compile Include="Models\Ator.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\ClassificacaoIndicativaEnum.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Filme.cs" />
     <Compile Include="Models\FilmeAtor.cs" />
     <Compile Include="Models\FilmeCategoria.cs" />
+    <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Idioma.cs" />
+    <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

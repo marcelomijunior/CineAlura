@@ -10,6 +10,17 @@ namespace ConsoleApp
         {
             using (var context = new CineAluraContext())
             {
+                Console.WriteLine("Clientes:");
+                foreach (var cliente in context.Clientes)
+                {
+                    Console.WriteLine(cliente);
+                }
+
+                Console.WriteLine("\r\nFuncionarios:");
+                foreach(var funcionario in context.Funcionarios)
+                {
+                    Console.WriteLine(funcionario);
+                }
             }
 
 
