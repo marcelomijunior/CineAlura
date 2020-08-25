@@ -207,6 +207,7 @@
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Idioma.cs" />
     <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Relatorio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
