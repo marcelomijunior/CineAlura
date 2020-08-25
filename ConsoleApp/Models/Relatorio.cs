@@ -1,7 +1,8 @@
 ﻿using ConsoleApp.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ConsoleApp.Models
 {
@@ -21,6 +22,23 @@ namespace ConsoleApp.Models
             {
                 Console.WriteLine($"O ator/Atriz {ator.PrimeiroNome} {ator.SegundoNome} atuou em {ator.Filmografia.Count} filmes.");
             }
+        }
+
+        public static void TotalAtoresEstrelandoCategoria(CineAluraContext context, string categoria)
+        {
+            var paramCategoria = new SqlParameter("category_name", categoria);
+            var paramToal = new SqlParameter()
+            {
+                ParameterName = "@total_actors",
+                Size = 4,
+                Direction = ParameterDirection.Output
+            };
+
+            context
+                .Database
+                .ExecuteSqlRaw("[total_actors_from_given_category] @category_name, @total_actors OUT", paramCategoria, paramToal);
+
+            Console.WriteLine($"Total de atores que estrelaram filmes na categira {categoria} é de {paramToal.Value}.");
         }
     }
 }
